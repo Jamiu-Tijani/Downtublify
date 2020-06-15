@@ -1,1 +1,2 @@
 youtube-dl==2020.6.6
+gunicorn==20.0.4
