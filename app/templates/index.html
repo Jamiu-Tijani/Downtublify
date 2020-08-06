@@ -53,26 +53,27 @@
 						
 							
 							<div class="wrap-input100 input100-select bg1">
+								
 								<span class="label-input100">Download links</span>
 								<div>
-									<select class="js-select2" name="service">
+									<select class="js-select2" name="sizes">
 										{%for items,sizes,url in ext %}
-										<option value ="{{ url }}">  {{items,sizes}} </option>
+										<option value= "{{ sizes }}" action = "{{ url }}">  {{items,sizes}} </option>
+										<div class="container-contact100-form-btn">
+											<form action= "{{ url }}"></form>
+											<button class="contact100-form-btn" name = "selected">
+												<span>
+													Download
+													<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+												</span>
+											</button>
+										</div>
 										{% endfor %}
-									</select>
-									
-
-						
+										
+									</select></form>
 								<div class="dropDownSelect2"></div>
 							</div>
-				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn">
-						<span>
-							Download
-							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
-						</span>
-					</button>
-				</div>
+				
 		
 		</div>
 	</div>

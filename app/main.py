@@ -2,6 +2,12 @@ from flask import Flask,redirect,url_for,render_template,request
 import youtube_dl
 import pandas as pd
 import numpy as np
+from lxml.html import fromstring
+import requests
+from itertools import cycle
+import traceback
+
+
 
 
 app=Flask(__name__)
@@ -11,18 +17,17 @@ def home():
 
 @app.route('/process',methods = ['POST'])
 def process():
-    user_input= request.form["name"]
+    user_input = request.form["name"]
     def my_hook(d):
         if d['status'] == 'finished':
             print('Done downloading, now converting ...')
-
     ydl_opts = {
     'format': 'bestaudio/best',       
     'outtmpl': '%(id)s',        
     'noplaylist' : True,        
-    'progress_hooks': [my_hook],  
+    'progress_hooks': [my_hook] 
     }
-
+    
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         result= ydl.extract_info(url = user_input,download = False)
     i =0
@@ -43,4 +48,11 @@ def process():
     df["links"] = link
     df["filesize"] = df["filesize"].apply(lambda x: str(np.trunc(x/1000000)) + "MB")
     ext = zip(extension,df["filesize"],link)
-    return render_template('index.html',ext=ext)    
+    return render_template('index.html',ext=ext) 
+
+@app.route('/download',methods = ['POST'])
+def download():
+    print(type(request.form.get('service')))
+    
+    return render_template('index.html')
+    
