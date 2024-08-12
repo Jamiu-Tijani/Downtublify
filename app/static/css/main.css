@@ -44,6 +44,8 @@
 body, html {
 	height: 100%;
 	font-family: Poppins-Regular, sans-serif;
+  background: #e6e6e6;
+
 }
 
 /*---------------------------------------------*/
@@ -166,7 +168,6 @@ iframe {
 
 .container-contact100 {
   width: 100%;  
-  min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;

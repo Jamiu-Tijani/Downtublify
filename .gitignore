@@ -1,0 +1,137 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+*.egg
+dist/
+build/
+pip-wheel-metadata/
+
+# Flask instance folder
+instance/
+*.sqlite3
+*.db
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Logs
+*.log
+*.out
+*.err
+
+# Virtual environment
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Environment variables file
+.env
+.env.local
+.env.*.json
+.envrc
+.env.development
+.env.production
+.env.test
+.env.staging
+
+# IDE / Editor configs
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.idea/
+
+# MacOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+desktop.ini
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+
+# Pyre type checker
+.pyre/
+
+# Celery beat schedule files
+celerybeat-schedule
+celerybeat.pid
+
+# Sphinx documentation
+docs/_build/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+
+# Flask config
+config.py
+config.yaml
+config.yml
+
+# Static and media files
+staticfiles/
+media/
+
+# Flask-Uploads
+uploads/
+
+# Flask session files
+*.session
+*.pem
+*.key
+
+# Jinja2 compiled templates
+*.jinja2c
+
+# Serverless Framework
+.serverless/
+
+# Docker
+docker-compose*.yml
+Dockerfile
+*.tar
+
+# Debug files
+*.swp
+*.swo
+
+# Test artifacts
+test_*.py
